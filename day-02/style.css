@@ -1,0 +1,146 @@
+/*  delete the following line if no text is used
+ edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+:root{
+    --menu-icon-line-height: 8px;
+    --menu-icon-line-space: 14px;
+    --menu-icon-line-offsetY: var(--menu-icon-line-height) + var(--menu-icon-line-space);
+    --menu-icon-height: ((3*var(--menu-icon-line-height))+(2*var(--menu-icon-line-space)));
+}
+/* use only the available space inside the 400x400 frame */
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #3faf82;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.menu-icon div {
+    background-color: #fff;
+    height: var(--menu-icon-line-height);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    width: 100px;
+    height: 56;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.line-2{
+    margin: var(--menu-icon-line-space) 0;
+}
+
+.active .line-1 {
+    animation: Line1Animation .5s forwards;
+}
+
+.active .line-2 {
+    animation: Line2Animation .5s forwards;
+    
+}
+.active .line-3 {
+    animation: Line3Animation .5s forwards;
+}
+
+.line-1.not-animation {
+    animation: Line1NotAnimation .5s backwards ease-out;
+}
+
+.line-2.not-animation {
+    animation: Line2NotAnimation .5s backwards ease-out;
+}
+.line-3.not-animation {
+    animation: Line3NotAnimation .5s backwards ease-out;
+}
+
+
+@keyframes Line1Animation {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: translateY(22px) rotate(0);
+    }
+    100%{
+        transform: translateY(22px) rotate(45deg);
+    }
+}
+
+@keyframes Line2Animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes Line3Animation {
+    0%{
+        transform: rotate(0deg);
+    }50%{
+        transform: translateY(-22px) rotate(0);
+    }
+    100%{
+        transform: translateY(-22px) rotate(-45deg);
+    }
+}
+
+@keyframes Line1NotAnimation {
+    0%{
+        transform:  translateY(22px) rotate(45deg);
+    }
+    50%{
+        transform: translateY(22px) rotate(0);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes Line2NotAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes Line3NotAnimation {
+    0%{
+        transform: translateY(-22px) rotate(135deg);
+    }50%{
+        transform: translateY(-22px) rotate(0);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}
+
