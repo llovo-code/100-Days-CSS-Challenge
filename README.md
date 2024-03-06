@@ -9,7 +9,7 @@ El objetivo principal de este desafío es mejorar mis habilidades en CSS mediant
 
 - **Día 1**: [Challenge 1](https://codepen.io/llovo-code/pen/eYomJbL)
 - **Día 2**: [Challenge 2](https://codepen.io/llovo-code/pen/eYoNKxo)
-- **Día 3**: [Ejemplo de diseño de tarjeta](#)
+- **Día 3**: [Challenge 3](https://codepen.io/llovo-code/pen/poBjyep)
 - ...
 
 Para ver el código de cada día, sigue los enlaces proporcionados.
