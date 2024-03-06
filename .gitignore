@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 .vscode
+=======
+
+.vscode/*
+/.vscode/*
+>>>>>>> fc118c29112beb0bc08264a297849456eab5d918
