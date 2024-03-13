@@ -1,0 +1,258 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+body {
+    background-color: #333;
+}
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #42a7a1;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    height: 220px;
+    width: 280px;
+    background-color: #fff;
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, .3);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #f1ba64;
+    width: 100%;
+    height: 60px;
+    display: grid;
+    color: #fff;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.date {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: justify;
+    padding: 0px 10px;
+}
+
+.type {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: end;
+    padding: 5px 10px;
+}
+
+.money {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: end;
+    padding: 0px 10px;
+}
+
+.big {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.small {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.parameters {
+    position: relative;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    padding: 0 10px;
+    gap: 20px;
+    /* outline: 1px solid red; */
+}
+
+.parameters span {
+    font-size: 10px;
+}
+
+.parameters .red::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 3px;
+    background: red;
+    margin-right: 5px;
+    border-radius: 2px;
+    margin-bottom: 2px;
+}
+
+.parameters .blue::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 3px;
+    background: #7BA2FF;
+    margin-right: 5px;
+    border-radius: 2px;
+    margin-bottom: 2px;
+}
+
+.statics {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+    height: 100px;
+    width: 260px;
+    margin: 0px auto;
+    /* outline: 1px solid purple; */
+}
+
+.statics div[class^="lines-"] {
+    width: 100%;
+    height: 2px;
+    background-color: #F2F2F2;
+}
+
+.data {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.data svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.data polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.data.red polyline {
+    stroke: red;
+}
+
+.data.blue polyline {
+    stroke: #7BA2FF;
+}
+
+
+.points [class^="point-"]{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+    z-index: 10;
+
+}
+
+
+.points .tooltip {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translate3d(-50%, 17px, 0);
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 9px;
+    color: #fff;
+    /* color: red; */
+    padding: 8px 6px;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity:0;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+}
+
+.points .tooltip:after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 6px;
+    width: 6px;
+    left: 40%;
+    margin-left: 0px;
+    bottom: -3px;
+    transform: rotate(45deg);
+}
+.red [class^="point-"], .tooltip, .tooltip:after {
+    background: red;
+}
+
+.points [class^="point-"]:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(-50%, 50%, 0);
+} 
+
+.blue [class^="point-"], .tooltip, .tooltip:after {
+    background: #7BA2FF;
+}
+
+.red .points .point-1 { left: 14px; top: 53px; }
+.red .points .point-2 { left: 57px; top: 28px; }
+.red .points .point-3 { left: 93px; top: 35px; }
+.red .points .point-4 { left: 138px; top: 22px; }
+.red .points .point-5 { left: 179px; top: 45px; }
+.red .points .point-6 { left: 208px; top: 51px; }
+.red .points .point-7 { left: 242px; top: 22px; }
+
+.blue .points .point-1 { left: 14px; top: 67px; }
+.blue .points .point-2 { left: 57px; top: 57px; }
+.blue .points .point-3 { left: 93px; top: 67px; }
+.blue .points .point-4 { left: 138px; top: 57px; }
+.blue .points .point-5 { left: 179px; top: 62px; }
+.blue .points .point-6 { left: 208px; top: 71px; }
+.blue .points .point-7 { left: 242px; top: 61px; }
+
+
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.day {
+    font-size: 14px;
+    /* line-height: 10px; */
+}
