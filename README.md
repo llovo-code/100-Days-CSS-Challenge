@@ -12,6 +12,7 @@ El objetivo principal de este desafío es mejorar mis habilidades en CSS mediant
 - **Día 3**: [Challenge 3](https://codepen.io/llovo-code/pen/poBjyep)
 - **Día 4**: [Challenge 4](https://codepen.io/llovo-code/pen/YzMydVv)
 - **Día 5**: [Challenge 5](https://codepen.io/llovo-code/pen/xxeEGmY)
+- **Día 6**: [Challenge 6](https://codepen.io/llovo-code/pen/XWQjdjj)
 - ...
 
 Para ver el código de cada día, sigue los enlaces proporcionados.

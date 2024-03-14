@@ -1,0 +1,212 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+}
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* background: #fff; */
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(to top, #30d0d0a3 0%, #040240 100%);
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card{
+    position: relative;
+    display: grid;
+    width: 320px;
+    height: 300px;
+    border-radius: 5px;
+    /* background-color:#fff ; */
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+    justify-content: space-between;
+
+
+}
+
+.profile{
+    background-color: #fff;
+    /* border-radius: inherit; */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    justify-content: center;
+    align-content: space-around;
+}
+
+.avatar-section{
+    margin: 10px auto;
+    /* background-color: #333; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.avatar-border-external{
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    border-right-color: transparent;
+    transition: rotate 1.3s ease-out;
+}
+
+.avatar-section:hover .avatar-border-external {
+    rotate: -360deg;
+}
+
+.avatar-border-internal{
+    position: absolute;
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    border-left-color: transparent;
+    transition: rotate 1.3s ease-out;
+}
+
+.avatar-section:hover .avatar-border-internal {
+    rotate: 360deg;
+}
+
+.avatar-picture{
+    background-image: url("image01.jpg");
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat:  no-repeat;
+    background-size: cover;
+}
+
+.info-section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #040240;
+}
+
+.info-section p {
+    position: relative;
+    top: -30px;
+    color: #040240;
+}
+
+.title{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.sub-title{
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.info-section a {
+    position: relative;
+    top: -20px;
+    /* width: 100px; */
+    display: inline-block;
+    font-size: 12px;
+	font-weight: 600;
+    padding: 5px 35px;
+    color: #040240;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border: 1px solid #1858ab;
+    border-radius: 25px;
+	transition: .5s ease;
+	cursor: pointer;
+}
+.info-section a:hover{
+    background-color: #1858ab;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+.totals-section{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  repeat(3, 100px);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.total{
+    background-color: #1858ab;
+    /* border-radius: inherit; */
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    transition: .7s ease;
+	cursor: pointer;
+}
+
+.total:hover{
+    background-color: #040240d4;
+}
+
+.total:nth-of-type(1){
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+.total:nth-of-type(3){
+    border-top: 1px  solid #fff;
+    border-bottom-right-radius: 5px;
+}
+
+.total-number{
+    font-weight: 700;
+}
+
+.total-text{
+    font-size: 0.8rem;
+}
+
